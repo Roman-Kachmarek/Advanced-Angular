@@ -1,0 +1,35 @@
+@import "base/variables";
+@import "base/mixins";
+
+header {
+  @include head(100%, 100px, rgb(52, 51, 51));
+  background-color: $head-bgcolor;
+  font-family: $head-font;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 10px;
+  .head-text {
+    margin-top: 15px;
+    font-weight: 700;
+  }
+}
+main {
+  @include container(700px, 70px, $container-color);
+  margin: 120px auto;
+  padding: 10px 10px;
+  border-radius: 5px;
+  .bw-container {
+    display: flex;
+    .bw-text {
+      margin-right: 5px;
+      font-size: 20px;
+      font-family: sans-serif;
+      font-weight: 600;
+    }
+    .bw-text2{
+        color: #bf190a;
+        font-size: 20px;
+        font-family: sans-serif;
+    }
+  }
+}

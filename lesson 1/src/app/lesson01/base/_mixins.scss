@@ -1,0 +1,30 @@
+@mixin head($w,$h,$color){
+    width: $w;
+    height: $h;
+    color:$color;
+}
+@mixin container($w,$h,$bgc){
+    width: $w;
+    height: $h;
+    background-color: $bgc;
+}
+@mixin add-button($w,$h,$bgc){
+    width: $w;
+    height: $h;
+    background-color: $bgc;
+}
+@mixin reset-button($w,$h,$bgc){
+    width: $w;
+    height: $h;
+    background-color: $bgc;
+}
+@mixin cenzor-button($w,$h,$bgc){
+    width: $w;
+    height: $h;
+    background-color: $bgc;
+}
+@mixin input-line($w,$h,$color){
+    width: $w;
+    height: $h;
+    color: $color;
+}
