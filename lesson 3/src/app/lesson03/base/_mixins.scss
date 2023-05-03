@@ -1,0 +1,34 @@
+@mixin head-text($fz, $ff) {
+  font-size: $fz;
+  font-family: $ff;
+}
+@mixin input-field($w, $h, $br) {
+  width: $w;
+  height: $h;
+  border-radius: $br;
+}
+@mixin error-field($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+@mixin add-btn($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+@mixin save-button($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+@mixin delete-button($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+@mixin update-button($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}

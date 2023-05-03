@@ -1,0 +1,24 @@
+<!-- <p>child works!</p> -->
+<table>
+    <thead>
+        <tr class="main-sheet">
+            <th class="sheet">#</th>
+            <th class="sheet1">Task</th>
+            <th class="sheet2">Check</th>
+            <th class="sheet3">Done/In progress</th>
+            <th class="sheet4">Edit</th>
+            <th class="sheet5">Delete</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr *ngFor="let task of taskArr; index as i">
+            <td class="sheet">{{i+1}}</td>
+            <td class="task-line">{{task.name}} </td>
+            <td><input type="checkbox" (click)="checker(i)" [checked]="task.check" ></td>
+            <td *ngIf="task.check" class="done-line">Done</td>
+            <td *ngIf="!task.check" class="progress-line">in PROGRESS</td>
+            <td><input type="button" value="Edit" [class]="editButton" (click)="editUser(i)"></td>
+            <td><input type="button" value="Delete" [class]="deleteButton" (click)="deleteLine(i)" [disabled]="!task.check"></td>
+        </tr>
+    </tfoot>
+</table>

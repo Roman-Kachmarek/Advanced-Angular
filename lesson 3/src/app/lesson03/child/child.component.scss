@@ -1,0 +1,71 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+tr,
+th,
+td {
+  border-bottom: 1px solid #d2d3d4;
+  padding: 15px;
+  font-size: 26.8px;
+  font-family: sans-serif;
+}
+tr:hover td {
+  background-color: #d2d3d4;
+  border: none;
+}
+.sheet {
+  padding-left: 30px;
+  padding-right: 120px;
+  font-weight: bold;
+}
+.sheet1 {
+  padding-right: 250px;
+}
+.sheet2 {
+  padding-right: 100px;
+}
+
+.sheet3 {
+  padding-right: 270px;
+}
+.sheet4 {
+  padding-right: 100px;
+}
+.sheet5 {
+  padding-right: 70px;
+}
+.task-line {
+  color: grey;
+}
+.done-line {
+  font-size: 20px;
+  color: green;
+}
+.progress-line {
+  font-size: 20px;
+  color: red;
+}
+
+.edit-btn {
+  width: 60px;
+  height: 40px;
+  background-color: goldenrod;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.delete-btn {
+  width: 80px;
+  height: 40px;
+  background-color: red;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  color: whitesmoke;
+  cursor: pointer;
+  &:disabled {
+    opacity: 0.5;
+  }
+}
