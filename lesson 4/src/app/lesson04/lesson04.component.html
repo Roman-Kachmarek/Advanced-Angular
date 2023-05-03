@@ -1,0 +1,48 @@
+<header>
+    <h2>My phone book!</h2>
+</header>
+<main>
+    <section class="search-box">
+        <input type="text" placeholder="search text goes here" class="input-field" [(ngModel)]="field">
+        <input type="button" value="add phone" class="add" (click)="addPhone()">
+    </section>
+    <table>
+        <thead>
+            <th (click)="NameSort()">First name <span *ngIf="hideFn" [textContent]="showFn ? '&#11165;' :
+                '&#11167;'"></span></th>
+            <th (click)="SurnameSort()">Last name <span *ngIf="hideSn" [textContent]="showSn ? '&#11165;' :
+                '&#11167;'"></span></th>
+            <th (click)="PhoneSort()">Number <span *ngIf="hidePhn" [textContent]="showPhn ? '&#11165;' :
+                '&#11167;'"></span></th>
+            <th>edit</th>
+            <th>delete</th>
+        </thead>
+        <tbody
+            *ngFor="let contact of contacts| search:field | fname:showFn|sname:showSn|phoneNumber:showPhn ,index as i">
+            <td>{{contact.fname}}</td>
+            <td>{{contact.sname}}</td>
+            <td>{{contact.pnumber}}</td>
+            <td><input type="button" value="edit" class="edit-btn" (click)="editUser(i)"></td>
+            <td><input type="button" value="delete" class="delete-button" (click)="deleteUser(i)"></td>
+        </tbody>
+    </table>
+
+    <section  *ngIf="addclient" class="add-modal">
+        <div class="add-menu"> 
+        <div class="add-header">
+            <span class="add-head">Add phone</span>
+            <div><i (click)="closeMenu()" class="uil
+                uil-multiply"></i></div>
+        </div>
+        <div class="add-main">
+            <input type="text" placeholder="first name goes here" class="first" [(ngModel)]="newContact.fname">
+            <input type="text" placeholder="second name goes here" class="second" [(ngModel)]="newContact.sname">
+            <input type="text" placeholder="number phone goes here" class="dial" [(ngModel)]="newContact.pnumber">
+            <div class="box-save">
+                <input type="button" value="Save" (click)="saveClient()">
+            </div>
+
+        </div>
+    </div>
+    </section>
+</main>

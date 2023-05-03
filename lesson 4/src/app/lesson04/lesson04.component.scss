@@ -1,0 +1,235 @@
+$delete-button: #f23d46;
+$edit-button: #e3bb2b;
+$add-button: #0f7d0b;
+$border-color: #d9d7d2;
+$text-color: grey;
+$background-modal: rgba(0, 0, 0, 0.397);
+$focus-color: #68c8ed;
+
+@mixin search-phone($w, $h, $br) {
+  width: $w;
+  height: $h;
+  border-radius: $br;
+}
+
+@mixin add-btn($w, $h, $br) {
+  width: $w;
+  height: $h;
+  border-radius: $br;
+}
+
+@mixin editBtn($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+
+@mixin deleteBtn($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+
+@mixin saveBtn($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+
+@mixin first-save($w, $h, $br) {
+  width: $w;
+  height: $h;
+  border-radius: $br;
+}
+
+@mixin addMenu($w, $h, $br) {
+  width: $w;
+  height: $h;
+  border-radius: $br;
+}
+
+@mixin saveBtn($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+
+// .back{
+//   background-color: $background-modal;
+// }
+
+@keyframes modelName {
+  from {
+    top: -20%;
+  }
+  to {
+    top: 5%;
+  }
+}
+
+header {
+  width: 80%;
+  border-bottom: 2px solid $border-color;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: red;
+  margin-left: 8%;
+  display: block;
+  h2 {
+    margin-top: 8px;
+    margin-bottom: 15px;
+  }
+}
+
+.search-box {
+  width: 80%;
+  margin-left: 8%;
+  margin-top: 25px;
+  border-bottom: 2px solid $border-color;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  .input-field {
+    @include search-phone(82%, 45px, 5px);
+    padding-left: 10px;
+    font-size: 15px;
+    color: $text-color;
+    border: none;
+    outline: 2px solid $border-color;
+    &:focus {
+      outline: 3px solid $focus-color;
+      box-shadow: 0px 3px 10px 10px #68c8ed
+    }
+   
+  }
+  .add {
+    @include add-btn(250px, 47px, 5px);
+    background-color: $add-button;
+    font-size: 18px;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 25px;
+  }
+}
+
+table {
+  margin-left: 8%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 80%;
+  padding-bottom: 15px;
+  font-family: sans-serif;
+  span {
+    font-size: 20px;
+  }
+
+  thead {
+    border-bottom: 3px solid $border-color;
+    th {
+      padding-right: 185px;
+      margin-left: 30px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+  tbody {
+    border-bottom: 2px solid $border-color;
+    td {
+      padding: 10px 5px;
+      font-size: 20px;
+    }
+    .edit-btn {
+      @include editBtn(70px, 50px, $edit-button);
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .delete-button {
+      @include deleteBtn(100px, 50px, $delete-button);
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      color: whitesmoke;
+    }
+  }
+}
+
+.add-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $background-modal;
+  z-index: 3;
+  .add-menu {
+    @include addMenu(600px, 350px, 5px);
+    border: 1px solid grey;
+    position: absolute;
+    top: 5%;
+    left: 32%;
+    background-color: whitesmoke;
+    animation: modelName 1s;
+    .add-header {
+      display: flex;
+      width: 600px;
+      border-bottom: 1px solid $border-color;
+      height: 65px;
+      .add-head {
+        font-size: 30px;
+        font-family: sans-serif;
+        display: block;
+        margin-left: 17px;
+        margin-top: 25px;
+        font-weight: 400;
+      }
+      .uil-multiply {
+        display: block;
+        margin-left: 400px;
+        margin-top: 28px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+    .add-main {
+      display: flex;
+      flex-direction: column;
+      .first {
+        @include first-save(80%, 35px, 5px);
+        margin-left: 45px;
+        margin-top: 20px;
+        cursor: pointer;
+        border: none;
+        outline: 1px solid $border-color;
+        padding-left: 15px;
+        &:focus {
+          outline: 3px solid $focus-color;
+          box-shadow: 0px 3px 6px 6px #68c8ed
+        }
+      }
+      .second {
+        @extend .first;
+      }
+      .dial {
+        @extend .first;
+      }
+    }
+    .box-save {
+      border-top: 1px solid $border-color;
+      margin-top: 10px;
+      input {
+        @include saveBtn(80px, 40px, #1e7bbd);
+        margin-left: 78%;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+        color: whitesmoke;
+        cursor: pointer;
+      }
+    }
+  }
+}
