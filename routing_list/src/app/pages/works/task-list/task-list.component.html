@@ -1,0 +1,22 @@
+<!-- <p>task-list works!</p> -->
+
+<header [class]="annoncement">
+    <h2>Play your day!</h2>
+    <h2>User: Roman Kachmarek. Count of Task {{count}}" </h2>
+</header>
+<main>
+    <section [class]="firstSection">
+        <input type="text" [class]="addSection" name="anyuser" [(ngModel)]="pushTask">
+        <input type="button" value="Add" [class]="btnAdd" (click)="addUser()">
+    </section>
+
+    <section [class]="secondSection">
+        <app-child [newTask]="addtask" (countLength)="takeLenght($event)" (childTask)="getName($event)">
+        </app-child>
+    </section>
+
+    <section *ngIf="save" class="save-field">
+        <input type="text" class="save-input" [(ngModel)]="getTask">
+        <input type="button" value="save" class="save-button" (click)="rename()">
+    </section>
+</main>

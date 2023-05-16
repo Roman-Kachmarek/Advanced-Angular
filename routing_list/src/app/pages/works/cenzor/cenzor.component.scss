@@ -1,0 +1,78 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+main {
+  @include container(720px, 300px, $container-color);
+  margin: 120px auto;
+  padding: 10px 10px;
+  border-radius: 5px;
+
+  .bw-container {
+    display: flex;
+
+    .bw-text {
+      margin-right: 5px;
+      font-size: 20px;
+      font-family: sans-serif;
+      font-weight: 600;
+    }
+
+    .bw-text2 {
+      color: #bf190a;
+      font-size: 20px;
+      font-family: sans-serif;
+    }
+  }
+
+  form {
+    .input-text {
+      @include input-line(467px, 34px, darkgray);
+      border: 0px;
+      border-radius: 5px;
+      cursor: pointer;
+      padding-left: 5px;
+      border: none;
+      outline: none;
+      &:focus {
+        outline: 3px solid #96d9d2;
+      }
+    }
+    .btn-add {
+      @include add-button(100px, 35px, $add-btncolor);
+      border: 0px;
+      border-radius: 5px;
+      margin-right: 10px;
+      margin-left: 10px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    .btn-reset {
+      @include reset-button(100px, 35px, $reset-btn-color);
+      color: whitesmoke;
+      border: 0px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+  }
+  .area-container {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 150px;
+    margin-top: 10px;
+    cursor: pointer;
+    &:focus {
+      outline: 3px solid #96d9d2;
+    }
+  }
+  .btn-cenzor {
+    @include cenzor-button(700px, 40px, $cenzor-btn-color);
+    margin-top: 10px;
+    border: 0px;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}

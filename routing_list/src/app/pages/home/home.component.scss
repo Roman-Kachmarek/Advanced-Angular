@@ -1,0 +1,78 @@
+@import'../../styles/mixins';
+@import'../../styles/variables';
+
+
+.main-box{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 230px;
+    .cenzor-box{
+        width: 400px;
+        height: 400px;
+        border: 2px solid $border-color;
+        border-radius: 2%;
+        .cenzor-img{
+            height: 250px;
+            img{
+                width: 100%;
+                height: 100%;    
+            }
+        }
+        h3{
+            font-size: 22px;
+            font-family: sans-serif;
+            text-align: center;
+            color:$error-text;
+        }
+        .cenzor-button{
+            height: 100px;
+            border-top: 2px solid $border-color ;
+            margin-top: 20px;
+            background-color: $container-color;
+            button{
+                background-color: $button-color;
+                width: 300px;
+                height: 50px;
+                border: none;
+                border-radius: 5px;
+                font-size: 20px;
+                margin-left: 50px;
+                margin-top: 25px;
+                cursor: pointer;
+                color: whitesmoke;
+                
+            }
+        }
+    }
+    .taskList-box{
+        @extend .cenzor-box;
+        .taskList-img{
+            @extend .cenzor-img;
+           
+        }
+        h3{
+            font-size: 22px;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .taskList-button{
+            @extend .cenzor-button
+        }
+    }
+    .userList-box{
+        @extend .cenzor-box;
+        .userList-img{
+            @extend .cenzor-img;
+        }
+        h3{
+            font-size: 22px;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .userList-button{
+            @extend .cenzor-button;
+        }
+    }
+}

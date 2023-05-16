@@ -1,0 +1,21 @@
+<!-- <p>cenzor works!</p> -->
+
+<main>
+    <div class="bw-container">
+        <span [class.bw-text]="badwd1">{{badwd1}}</span>
+        <span [class.bw-text2]="badWords_text">{{badWords_text}}</span>
+    </div>
+    <form>
+        <input type="text" name="anyName" [class.input-text]="word" [(ngModel)]="inputWords"
+            [placeholder]="confirm ? 'Word here...':'plese put a word here...'"
+            [style.border]="confirm ? '1px solid gray' : '1px solid red'">
+        <input type="button" [class.btn-add]="add" value="Add" (click)="addword()">
+        <input type="button" [class.btn-reset]="remove" value="Reset" (click)="removewords()">
+    </form>
+    <form>
+        <textarea [class.area-container]="area" name="areaName" [(ngModel)]="areaText"
+            [placeholder]="accept ? 'Text here...': 'Please write a text here.....'"
+            [style.border]="accept ? '1px solid gray':'1px solid red'"> </textarea>
+        <input type="button" [class]="cenzor" value="Cenzor" (click)="cenzortext()">
+    </form>
+</main>

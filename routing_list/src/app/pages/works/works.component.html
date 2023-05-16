@@ -1,0 +1,26 @@
+<!-- <p>works works!</p> -->
+
+<div class="works">
+    <ul class="nav-bar">
+        <li class="navBar-li">
+            <a class=" text">Last Works > > > </a>
+        </li>
+
+        <li class="navBar-li">
+            <a [routerLink]="[ '/works/cenzor' ]" routerLinkActive="active" class="navBar-a">Cenzor</a>
+        </li>
+        <li class="navBar-li">
+            <a [routerLink]="[ '/works/userList' ]" routerLinkActive="active" class="navBar-a">User</a>
+        </li>
+        <li class="navBar-li">
+            <a [routerLink]="[ '/works/taskList' ]" routerLinkActive="active" class="navBar-a">Task</a>
+        </li>
+        <div class="navBar-empt"></div>
+        <li class="navBar-li">
+            <a [routerLink]="[ '/home' ]" class="back-home home">Back to >>> Home </a>
+        </li>
+    </ul>
+</div>
+<main>
+    <router-outlet></router-outlet>
+</main>

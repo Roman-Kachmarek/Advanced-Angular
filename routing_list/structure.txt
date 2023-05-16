@@ -1,0 +1,14 @@
+app/
+    components/
+        header.component
+        footer.component
+    pages/
+        home/
+            home.component
+        works/
+            cenzor.component
+            userList.component
+            taskList.component
+    styles/
+            _varibles.scss
+            _mixins.scss

@@ -1,0 +1,63 @@
+@mixin container($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+@mixin add-button($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+@mixin reset-button($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+@mixin cenzor-button($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+@mixin input-line($w, $h, $color) {
+  width: $w;
+  height: $h;
+  color: $color;
+}
+
+
+@mixin head-text($fz, $fw, $cl) {
+  font-size: $fz;
+  font-weight: $fw;
+  color: $cl;
+}
+@mixin input-field($w, $h, $br) {
+  width: $w;
+  height: $h;
+  border-radius: $br;
+}
+@mixin error-field($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+@mixin user-btn($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+@mixin edit-button($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+@mixin delete-button($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+@mixin update-button($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+

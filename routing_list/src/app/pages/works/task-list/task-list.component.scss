@@ -1,0 +1,89 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.head {
+  width: 80%;
+  height: 140px;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  flex-flow: column;
+  margin-left: 180px;
+  @include head-text(25px, 20px, $header-font);
+  h2 {
+    padding-bottom: 20px;
+  }
+}
+main {
+  .first-block {
+    width: 80%;
+    height: 75px;
+    border-bottom: 1px solid $border-color;
+    margin-left: 180px;
+    margin-top: 10px;
+    display: flex;
+    .add-input {
+      @include input-field(83%, 45px, 5px);
+      margin-top: 5px;
+      margin-right: 20px;
+      border: none;
+      outline: 1px solid $border-color;
+      font-size: 15px;
+      padding-left: 20px;
+      color: rgb(140, 140, 140);
+      cursor: pointer;
+      &:focus {
+        outline: 4px solid $focus-bgc;
+        border: none;
+      }
+    }
+    .add-button {
+      @include add-button(230px, 45px, $adduser-btn);
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      color: whitesmoke;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+  }
+  .second-block {
+    width: 80%;
+    border-right-style: none;
+    border-left-style: none;
+    margin-left: 180px;
+    margin-top: 10px;
+    font-size: 30px;
+  }
+}
+.save-field {
+  width: 100%;
+  height: 60px;
+  padding-top: 5px;
+  &:hover {
+    background-color: #d2d3d4;
+  }
+  .save-input {
+    width: 200px;
+    height: 30px;
+    margin-left: 700px;
+    border: 1px solid #d2d3d4;
+    cursor: pointer;
+    padding-left: 10px;
+    color: grey;
+    &:focus {
+      outline: 2px solid #8ac4d1;
+      border: none;
+    }
+  }
+  .save-button {
+    width: 60px;
+    height: 40px;
+    background-color: green;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: whitesmoke;
+    margin-left: 315px;
+  }
+}

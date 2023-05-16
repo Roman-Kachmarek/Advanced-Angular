@@ -1,0 +1,66 @@
+<!-- <p>user-list works!</p> -->
+
+<div class="main-container">
+    <form class="user-add" name="f1">
+
+        <div [class]="loginMain">
+            <h4 [class]="heading">Login</h4>
+            <input type="text" [class]="loginInput" name="loginname" [placeholder]="placeholderLogin"
+                [(ngModel)]="user.login">
+            <div>
+
+            </div>
+        </div>
+
+        <div [class]="passMain">
+            <h4 [class]="heading">Password</h4>
+            <input type="password" name='passname' [class]="passInput" [placeholder]="placeholderPass"
+                [(ngModel)]="user.pass">
+            <div>
+
+            </div>
+        </div>
+
+        <div [class]="mailMain">
+            <h4 [class]="heading">Email address</h4>
+            <input type="text" [class]="mailInput" name="usermail" [placeholder]="placeholderMail"
+                [(ngModel)]="user.email">
+            <div>
+            </div>
+        </div>
+
+        <div [class]="btnMain">
+            <input *ngIf="!editStatus" type="button" value="Add user" [class]="userBtn" (click)="addUser()"
+                [disabled]=" !user.login || !user.pass || !user.email">
+            <input *ngIf="editStatus" type="button" value="Edit user" [class]="updateBtn" (click)="saveEditUser()">
+        </div>
+    </form>
+
+    <div [class]="tableHeader">
+        <table>
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Login</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let user of userArr; index as i">
+                    <th>{{i+1}}</th>
+                    <th>{{user.login}}</th>
+                    <th>{{user.pass}}</th>
+                    <th>{{user.email}}</th>
+                    <th><input type="button" [class]="editBtn" value="Edit" (click)="editUser(i)"></th>
+                    <th><input type="button" [class]="deleteBtn" value="Delete" [disabled]="editStatus"
+                            (click)="deleteUser(i)"></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

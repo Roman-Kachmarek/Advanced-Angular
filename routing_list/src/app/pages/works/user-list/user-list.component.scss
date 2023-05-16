@@ -1,0 +1,132 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.main-container {
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+  .user-add {
+    width: 50%;
+    .login-main {
+      .header {
+        @include head-text(20px, 100, grey);
+        margin-left: 10px;
+        margin-top: 20px;
+        font-family: $header-font;
+      }
+      .login-input {
+        @include input-field(80%, 45px, 5px);
+        border: none;
+        outline: 1px solid #cccecf;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-size: 15px;
+        padding-left: 10px;
+        &:focus {
+          outline: 3px solid $input-outline;
+        }
+      }
+    }
+    .pass-main {
+      .header {
+        @include head-text(20px, 100, grey);
+        margin-left: 10px;
+        margin-top: 20px;
+        font-family: $header-font;
+      }
+      .pass-input {
+        @include input-field(80%, 45px, 5px);
+        border: none;
+        outline: 1px solid #cccecf;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-size: 15px;
+        padding-left: 10px;
+        &:focus {
+          outline: 3px solid $input-outline;
+        }
+      }
+    }
+    .mail-main {
+      .header {
+        @include head-text(20px, 100, grey);
+        margin-left: 10px;
+        margin-top: 20px;
+        font-family: $header-font;
+      }
+      .mail-input {
+        @include input-field(80%, 45px, 5px);
+        border: none;
+        outline: 1px solid #cccecf;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-size: 15px;
+        padding-left: 10px;
+        &:focus {
+          outline: 3px solid $input-outline;
+        }
+      }
+    }
+    .btn-main {
+      .user-button {
+        @include user-btn(82%, 40px, $adduser-btn);
+        margin-top: 20px;
+        margin-left: 10px;
+        color: whitesmoke;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        &:disabled {
+          opacity: 0.6;
+        }
+      }
+      .edit-btn {
+        @include update-button(82%, 40px, $update-button);
+        margin-top: 20px;
+        margin-left: 10px;
+        color: whitesmoke;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+  .table-header {
+    table {
+      width: 80%;
+    }
+    table,
+    tr,
+    th {
+      margin: 50px 0 0 30px;
+      border-top: 3px solid #cccecf;
+      border-bottom: 3px solid #cccecf;
+      border-collapse: collapse;
+      padding: 20px;
+      font-family: sans-serif;
+    }
+  }
+  .item-list {
+    border: 1px solid orange;
+  }
+  .btn-edit {
+    @include edit-button(60px, 40px, $edit-button);
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-delete {
+    @include delete-button(80px, 40px, $error-button);
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    &:disabled {
+      opacity: 0.6;
+    }
+  }
+}
